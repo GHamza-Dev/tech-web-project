@@ -69,6 +69,7 @@ header{
     flex-direction: column;
     align-items: center;
 }
+
 /* logo */
 .logo{
    font-size: 1.1rem;
@@ -240,4 +241,41 @@ footer ul{
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}
+
+
+/************
+Devices : 1040px & 660px
+********************/
+@media screen and (max-width:1040px){
+    .container,.container header,.container .h_txt {
+        width: 100%;
+    }
+    .container .h_content{
+        text-align: center;
+        flex-direction: column;
+        /*
+        background: url('../images/code_typing.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        */
+    }
+    .container .h_txt{
+        width: 100%;
+    }
+    .container .h_img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:660px){
+    section.how_it_works ul{
+        max-width: 429px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 60px auto;
+    } 
+
 }
