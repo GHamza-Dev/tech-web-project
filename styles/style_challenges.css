@@ -3,14 +3,15 @@
 
 
 /** Search icon **/
-.container nav li.search:hover{
-    transform: translateY(0);
-    border-bottom: none;
+
+.container nav ul {
+    align-items: center;
 }
 
-.container nav.filter {
-    height: 300px;
-    align-items: flex-start;
+.container  nav .search img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
 }
 
 /** Section : challenges **/
@@ -92,7 +93,9 @@ section.challenges{
     background: linear-gradient(to right,var(--primary--clr),var(--secondary--clr));
     outline: none;
 }
-
+.challenge .view a{
+    color: #fff;
+}
 .ml-10{
     margin-left: 10px;
 }
