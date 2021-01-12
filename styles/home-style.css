@@ -4,6 +4,8 @@
     --secondary--clr:#d412aa;
     --darck--clr1:#0A1523;
     --darck-clr2:#00252E;
+    --light--clr1:#d3cbe4;
+    --nav-anchor-clr:#3E54A3;
 }
 *{
     margin: 0;
@@ -73,6 +75,7 @@ header{
 /* logo */
 .logo{
    font-size: 1.1rem;
+    margin-left: 5%;
 }
 /**
 *
@@ -82,31 +85,35 @@ header{
 .container nav {
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary--clr);
-    padding: 15px;
-    border-radius: 50px;
+    height: 62px;
     position: fixed;
     text-align: center;
-    width: 90%;
-    margin-top: 10px;
-   
+    width: 100%;
+    z-index: 2;
+    padding: 0 20px 0 20px;
+    border-bottom: solid 1px var(--light--clr1);
 }
 .container nav ul{
-    width: 40%;
+    margin-right: 5%;
+    max-width: 546px;
+    width: 60%;
     justify-content: space-between;
 }
-.container a{
+.container nav a{
     letter-spacing: 1px;
-    color: #fff;
+    color: var(--nav-anchor-clr);
+    text-transform: uppercase;
+    padding-bottom: 5px;
 }
 
-.container nav li{
-    border: none;
-    transition: all .5s ease;
+.container nav li a{
+    transition: all 1s ease;
+    border-bottom:2px white solid;
 }
-.container nav li:hover{
+.container nav li a:hover{
     transform: translateY(-5px);
-    border-bottom: solid 2px red;
+    border-bottom: solid 2px var(--nav-anchor-clr);
+    padding-bottom:0;
 }
 
 
@@ -244,9 +251,9 @@ footer ul{
 }
 
 
-/************
+/************ CSS Media
 Devices : 1040px & 660px
-********************/
+**********************/
 @media screen and (max-width:1040px){
     .container,.container header,.container .h_txt {
         width: 100%;
