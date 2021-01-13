@@ -25,18 +25,29 @@ section.challenges{
 
 .challenge{
     width: 350px;
-    border: var(--primary--clr) solid 1px;
+    border: var(--light--clr1) solid 1px;
     position: relative;
     border-radius: 4px;
     transition: all .5s ease-out;
     margin: auto;
     margin-top: 50px;
 }
-
+.challenge .ch_level{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+    transform: rotate(-90deg);
+    align-items: center;
+    height: 40px;
+    position: absolute;
+    color: #fff;
+    background-color: rgba(0, 0, 0,.4);    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 98%, 14% 51%); 
+}
 .challenge img{
     width: 100%;
     border-radius: 4px 4px 0 0;
     transition: all .5s ease;
+    border-bottom: 1px solid var(--light--clr1)  ;
 }
 
 .challenge:hover{
@@ -65,15 +76,16 @@ section.challenges{
     font-size: .90rem;
 }
 
-.challenge  .level {
+.challenge  .stat {
     text-align: center;
 }
-.challenge  .level_txt{
+.challenge  .stat_txt{
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: .9rem;
     letter-spacing: 2px;
     font-weight: bolder;
     padding-bottom: 15px;
+    opacity: .8;
 }
 
 
@@ -81,10 +93,8 @@ section.challenges{
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
-}
-
-.challenge .view {
-    padding: 12px 20px;
+    padding: 14px 20px;
+    width: 200px;
     font-weight: 600;
     font-size: 1.2rem;
     border: none;
@@ -92,29 +102,11 @@ section.challenges{
     color: #fff;
     background: linear-gradient(to right,var(--primary--clr),var(--secondary--clr));
     outline: none;
+    cursor: pointer;
 }
 .challenge .view a{
     color: #fff;
 }
 .ml-10{
     margin-left: 10px;
-}
-
-.html{
-    color: orangered;
-}
-.css{
-    color: slateblue;
-    margin-left: 10px;
-}
-.js{
-    color: #ecec10;
-    margin-left: 10px;
-}
-
-.api{
-    color: teal;
-}
-.intermediate{
-    color: #FDCE81;
 }

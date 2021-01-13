@@ -1,0 +1,50 @@
+
+.html{
+    color: orangered;
+}
+.css{
+    color: slateblue;
+    margin-left: 10px;
+}
+.js{
+    color: #d6d624;
+    margin-left: 10px;
+}
+
+.api{
+    color: teal;
+}
+.challenge .intermediate{
+    background-color: rgba(0, 0, 0,.8);
+    background-color: #e9a333;
+    width: 120px;
+    right: -35px;
+    top: 40px;
+}
+.challenge .newbe{
+    right: -5px;
+    top: 16px;
+    width: 70px;
+    background-color: #069b06;
+}
+.challenge .advanced{
+    right: -20px;
+    top: 30px;
+    width: 95px;
+    background-color: #e94311;
+    
+}
+
+.challenge .senior{
+    right: -5px;
+    top: 14px;
+    width: 65px;
+    background-color: slateblue;
+}
+.challenge .junior{
+    right: -5px;
+    top: 14px;
+    width: 65px;
+    background-color: #11c9da;
+}
+

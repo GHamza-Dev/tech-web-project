@@ -108,7 +108,7 @@ header{
 
 .container nav li a{
     transition: all 1s ease;
-    border-bottom:2px white solid;
+    border-bottom:2px transparent solid;
 }
 .container nav li a:hover{
     transform: translateY(-5px);
@@ -116,6 +116,30 @@ header{
     padding-bottom:0;
 }
 
+/** Menu Button
+*****************/
+.container .btn-menu{
+    position: absolute;
+    top: 19px;
+    right: 5%;
+    z-index: 3;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    flex-direction: column;
+}
+
+.container .btn-menu .line{
+    background-color: #00252E;
+    height: 5px;
+    width: 35px;
+    border-radius: 2px;
+    margin: 2px 0;
+    background-color: var(--primary--clr);
+    transition: all .5s ease;
+}
 
 /*
 *
@@ -201,7 +225,7 @@ section.how_it_works ul p{
     font-size: 1rem;
     padding: 5px;
     opacity: 0.8;
-
+    
 }
 section.how_it_works li{
     padding: 10px;
@@ -275,7 +299,40 @@ Devices : 1040px & 660px
         display: none;
     }
 }
-
+@media screen and (max-width:850px){
+    .logo{
+        position: absolute;
+        top: 19px;
+        left: 5%;
+    }
+    .container nav{
+        overflow: hidden;
+        background-color: #fff;
+        transition: all .5s ease;
+    }
+    .container nav ul{
+        margin: auto;
+        max-width: 100%;
+        height: 300px;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .container nav ul li:nth-child(1){
+        opacity: 0;
+    }
+    .container .btn-menu{
+        display: flex;
+    }
+    /******* waiting for an event
+    *****************************/
+    .container nav.show_menu{
+        padding-top: 25px;
+        height: 300px;
+    }
+    .container nav.show_menu ul li:nth-child(1){
+        opacity: 1;
+    }
+}
 @media screen and (max-width:660px){
     section.how_it_works ul{
         max-width: 429px;
@@ -284,5 +341,16 @@ Devices : 1040px & 660px
         text-align: center;
         margin: 60px auto;
     } 
+    
+}
 
+
+/********* waittnig for events
+******************************/
+
+/****** clicked menu-btn
+************************/
+
+.container .btn-menu.clicked-mn-btn .l2{
+    transform: translateX(-10px);
 }
