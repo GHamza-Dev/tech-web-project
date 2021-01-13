@@ -1,4 +1,6 @@
-
+:root{
+    --light--clr2:#7d7888;
+}
 
 
 
@@ -8,10 +10,71 @@
     align-items: center;
 }
 
-.container  nav .search img{
+.container  nav .filter_icon img{
     width: 45px;
     height: 45px;
     cursor: pointer;
+    z-index: 3;
+}
+
+/***** Filter form
+*******************/
+.container .filter{
+    position: absolute;
+    width: 60%;
+    top: 35px;
+    right: 8.1%;
+    background-color: #F9F8FD;
+    border: var(--light--clr1) solid 1px;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.container .form_filter ul{
+    min-width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.container .form_filter ul img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 2px;
+}
+
+.container .filter .keys{
+    border: 1px solid var(--light--clr1);
+    border-radius: 5px;
+    position: relative;
+    padding: 2px 5px 2px 0;
+}
+.container .filter .keys input{
+    height: 24px;
+    margin-left: 25px;
+    border: none;
+    outline: none;
+}
+.container .filter  label{
+    color: var(--darck--clr1);
+    margin-right: 5px;
+    letter-spacing: 1px;
+}
+.container .filter select{
+    padding: 5px;
+    border-color: var(--light--clr1);
+    background-color: transparent;
+    font-size: .9rem;
+    border-radius: 5px;
+    color: var(--light--clr2);
+    letter-spacing: 1px;
+    outline: none;
 }
 
 /** Section : challenges **/
@@ -109,4 +172,14 @@ section.challenges{
 }
 .ml-10{
     margin-left: 10px;
+}
+
+
+
+/***** Waitting for events
+***************************/
+
+/** Schow filter menu **/
+.container .filter.show_filter_form{   
+    opacity: 1;
 }

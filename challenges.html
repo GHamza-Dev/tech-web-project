@@ -20,16 +20,49 @@
                 </div>
             
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Challenges</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
                     <li><a href="#">Solutions</a></li>
-                    <li class="search"><img src="../images/Filter.svg" alt="filter"></li>
+                    <li class="filter_icon"><img src="../images/Filter.svg" alt="filter"></li>
                 </ul>
                 <button class="btn-menu">
                     <span class="line"></span>
                     <span class="line l2"></span>
                     <span class="line"></span>
                 </button>
+                <div class="filter">
+                    <form action="" class="form_filter">
+                        <ul>
+                            <li>
+                                <label for="keys">Keys</label>
+                                <span class="keys">
+                                    <img src="../images/search_icon.svg" alt="search" class="icon_search">
+                                    <input type="text" name="keys" id="keys">
+                                </span>                                
+                            </li>
+                            <li>
+                                <label for="level">Level</label>
+                                <select name="level" id="level">
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="newbe">Newbe</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="junior">Junior</option>
+                                    <option value="senior">Senior</option>
+                                  </select>
+                            </li>
+                            <li>
+                                <label for="langs">Languages and techs</label>
+                                <select name="langs" id="langs">
+                                    <option value="htmlcss">HTML&CSS</option>
+                                    <option value="js">JS</option>
+                                    <option value="api">API</option>
+                                    <option value="cpp">C++</option>
+                                    <option value="java">Java</option>
+                                  </select>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
             </nav>
         </header>   
         <!-- Section : challenges-->
