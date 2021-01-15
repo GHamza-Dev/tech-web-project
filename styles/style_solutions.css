@@ -1,0 +1,36 @@
+
+
+
+
+/****** made by : Dev info 
+**************************/
+.challenge button.view{
+   bottom: -26px;
+}
+
+.made_by{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 9px 0;
+    border: none;
+    border-top: 1px solid var(--light--clr1);
+}
+.made_by .dev_info{
+    display: flex;
+    flex-direction: row;
+}
+.made_by .dev_info img{
+    width: 50px;
+    height: 50px;
+    border: solid var(--primary--clr) 2px;
+    border-radius: 50%;
+}
+
+.dev_info_txt{
+    margin-left: 15px ;
+}
+
+.dev_info_txt h3{
+    font-size: 1.1rem;
+}
