@@ -18,7 +18,18 @@ menuBtn.addEventListener('click',()=>{
 });
 
 
+/**** scroll event */
+window.addEventListener('scroll',()=>{
+    let nav  = document.querySelector('.container nav');
+    if(scrollY > 25) {
+        nav.classList.add('scrolling');
+    }else{
+        nav.classList.remove('scrolling');
+    }
+});
+
 /**** Show hide filter form */
 filterIcon.addEventListener('click',()=>{
     filterForm.classList.toggle("show_filter_form");
 });
+

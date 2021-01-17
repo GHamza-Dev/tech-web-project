@@ -92,6 +92,7 @@ header{
     z-index: 2;
     padding: 0 20px 0 20px;
     border-bottom: solid 1px var(--light--clr1);
+    transition: .5s ease;
 }
 .container nav ul{
     margin-right: 5%;
@@ -353,4 +354,14 @@ Devices : 1040px & 660px
 
 .container .btn-menu.clicked-mn-btn .l2{
     transform: translateX(-10px);
+}
+
+
+.container nav.scrolling{
+    width: 95%;
+    top: 7px;
+    border-radius: 60px;
+    box-shadow: 1px -1px 6px rgb(219, 209, 209);
+    background-color: #fff;
+    border: none;
 }
