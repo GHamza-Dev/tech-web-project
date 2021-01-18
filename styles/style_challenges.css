@@ -84,7 +84,9 @@ section.challenges{
     margin:100px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
-    
+    background-image: radial-gradient(#f6f1f1 50%,transparent 50%);
+    background-size: 4px 4px;
+    padding-bottom: 60px;
 }
 
 .challenge{
@@ -95,6 +97,8 @@ section.challenges{
     transition: all .5s ease-out;
     margin: auto;
     margin-top: 50px;
+    background-color: #fff;
+    
 }
 .challenge .ch_level{
     display: flex;

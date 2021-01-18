@@ -359,9 +359,11 @@ Devices : 1040px & 660px
 
 .container nav.scrolling{
     width: 95%;
+    padding: 0 5px;
     top: 7px;
     border-radius: 60px;
-    box-shadow: 1px -1px 6px rgb(219, 209, 209);
+    box-shadow: 1px -1px 6px rgb(195, 175, 175);
     background-color: #fff;
     border: none;
 }
+
