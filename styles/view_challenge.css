@@ -8,6 +8,7 @@
     flex-direction: row;
 }
 
+
 .wrapper .langs_nad_techs{
     margin: 16px 0;
     font-size: 1.3rem;
@@ -25,11 +26,27 @@
     position: absolute;
     height: 500px;
     top: 0;
-    width: 70%;
+    width: 80%;
     border: rgb(187, 187, 187) solid 1px;
     opacity: .5;
     cursor: pointer;
     transition: all .5s ease;
+}
+
+
+@media screen and (max-width:990px){
+    .wrapper{
+        flex-direction: column;
+    }   
+    .wrapper .design{
+        position: relative; 
+    }
+    .wrapper .design{
+        width: 100%;   
+    }
+    .wrapper .start{
+        margin-top: 450px;
+    }
 }
 
 
@@ -42,7 +59,7 @@
 .mob_design{
     z-index: 1;
     left: 0;
-    width: 40%;
+    width: 273px;
 }
 .desk_design{
     z-index: 1;
