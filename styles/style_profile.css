@@ -1,0 +1,145 @@
+:root{
+    --bg--clr: rgb(238, 228, 228);
+    --bg--clr2:rgb(246, 241, 241);
+}
+
+
+
+/***** flex : row direction ********/
+.dev ,
+.dev .dev_bio,
+ul.menu{
+    display: flex;
+    flex-direction: row;
+}  
+
+/******* Dev
+***************/
+.dev{
+    width: 90%;
+    margin:90px auto;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    background-color:var(--bg--clr);
+    border-radius: 10px 10px 0 0;
+    
+}
+@media screen and (max-width:766px){
+  .dev{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }  
+}
+/** dev :::> images **/
+.dev .dev_bio_img img{
+    width: 150px;
+    border-radius: 50%;
+    border-left: solid var(--primary--clr) 5px;
+}
+
+.dev img.location{
+    width: 15px;
+    height: 20px;
+}
+
+.dev .github_account img{
+    width: 40px;
+    margin-top: 10px;
+}
+
+/***** dev_bio
+**************/
+.dev_bio{
+    margin: 5px 0 0 10px;
+}
+
+/** dev_bio_txt **/
+.dev_bio_txt{
+    margin-left:15px;
+    padding-left: 15px;
+    height: 100%;
+}
+
+.dev_bio h2,
+.dev_bio h3,
+.dev_bio p.about{
+    color: #5d5454;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.dev_bio h2{
+    font-size: 1.2rem;
+}
+
+.dev_bio p.about{
+    margin-top: 10px;
+}
+
+
+/*** dev statistic
+*******************/
+.dev_statistic{
+    margin: 10px 10px 0 0;
+    text-align: center;
+    color: rgb(78, 73, 73);
+}
+
+.nbr_of_solutions , 
+.scroe{
+    color: var(--primary--clr);
+}
+
+/**** menu 
+************/
+ul.menu{
+    width: 90%;
+    margin:  auto; 
+}
+
+ul.menu li{
+border-bottom: 2px solid var(--primary--clr);
+cursor: pointer;
+}
+
+.view_todos{
+    margin-left: 20px;
+}
+
+ul.menu li:hover{
+    border-bottom: red 2px solid;
+}
+
+/***** todos
+*************/
+.todos{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.todos .todo{
+    margin: 10px;
+    margin-left: 0;
+    background-color: var(--bg--clr2);
+}
+
+.todos .submit_s a{
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+/*** levels ****/
+.todo.intermediate{
+    border-top: 5px solid #e9a333;
+} 
+.todo.junior{
+    border-top: 5px solid #11c9da;
+}
+.todo.senior{
+   border-top:5px solid slateblue;
+}
+.todo.newbe{
+    border-top:  solid 5px #069b06;
+}
