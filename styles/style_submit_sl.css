@@ -1,0 +1,153 @@
+
+
+
+.container header nav{
+    background-color: var(--primary--clr);
+    border-bottom: none;
+}
+
+.container header nav li a:hover{
+    border-bottom: transparent solid;
+    color: #94c7c7;
+}
+
+.container header nav a{
+    color: #fff;
+}
+
+.container .btn-menu .line{
+    background-color: #fff;
+}
+
+.container nav.scrolling{
+    box-shadow: 0 0 0;
+    background-color: var(--primary--clr);
+}
+
+/*** intro with bgimage of the current project ***/
+.intro{
+    
+    background-image: url('/test/test_img2.jpg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.intro h1{
+    position: absolute;
+    /*left: 50%;
+    transform: translateX(-50%);*/
+    color: #fff;
+    z-index: 3;
+    font-size: 3rem;
+    margin-top: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width:572px){
+    .intro h1{
+        font-size: 2.7rem;
+    }
+}
+
+.intro::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    position: absolute;
+}
+
+/****** wrapper  
+***************/
+.wrapper{
+    width: 90%;
+    max-width: 390px;
+    margin: auto;
+    top: 160px;
+    transform: translate(-50%);
+    left:50%;
+    z-index: 3;
+    position: absolute;
+    background-color: rgb(236, 233, 233); 
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px gray;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width:460px){
+    .intro h1{
+        font-size: 2.4rem;
+    }
+    .wrapper{
+        top: 190px;
+    }
+    
+}
+
+.wrapper form {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper li {
+    margin-top: 10px;
+} 
+.wrapper label{
+    font-size: 1.3rem;
+}
+
+.wrapper input,
+.wrapper textarea{
+    padding:9px 0;
+    padding-left: 9px;
+    outline:none;
+    width: 100%;
+    border: 1px solid var(--primary--clr);
+    transition: all .3s ease;
+    font-size: 1.1rem;
+    color: var(--primary--clr);
+}
+
+.wrapper input:hover,
+.wrapper textarea:hover{
+    border: 1px solid var(--primary--clr);
+    outline: solid 3px rgba(142, 101, 235,0.4);
+    border-radius: 0;
+}
+
+.wrapper input{
+    border-radius: 20px;
+    
+}
+
+.wrapper textarea{
+    border-radius: 10px;
+}
+
+.wrapper button{
+    float:right;
+    width: 100px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: var(--primary--clr);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    background-image: linear-gradient(to right,var(--primary--clr),var(--secondary--clr));
+    background-position: left;
+    background-size: 200%;
+    transition: all .5s ease-in;
+}
+    
+.wrapper button:hover{
+    background-position: right;
+}
