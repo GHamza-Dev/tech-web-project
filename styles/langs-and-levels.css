@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: row;
     font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.langs_nad_techs li{
+    text-transform: uppercase;
 }
 
 .html{
@@ -18,7 +23,11 @@
 
 .api{
     color: teal;
+    margin-left: 10px;
 }
+
+
+
 .challenge .intermediate{
     background-color: rgba(0, 0, 0,.8);
     background-color: #e9a333;
