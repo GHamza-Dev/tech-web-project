@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+
+    require 'config/db_config.php';
+    $db = new Db();
+    if(isset($_GET['id'])){
+        $id = $_GET['id']; // filter /!\
+        $challenge = $db->getChallenges($id);
+        $langs = explode(" ",strtolower($challenge[0][2]));
+        $len = count($langs);      
+        $db->insertDownload($id,$_SESSION['id']);
+    }    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +36,8 @@
             
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="challenges.html">Challenges</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="challenges.php">Challenges</a></li>
+                    <li><a href="solutions.php">Solutions</a></li>
                 </ul>
                 <button class="btn-menu">
                     <span class="line"></span>
@@ -32,24 +47,24 @@
             </nav>
         </header> 
         <div class="wrapper">
-            <div class="l">
+        <div class="l">
                 <!-- ch title -->
                 <h1 class="view_ch_title">
-                    Launch countdown timer
+                    <?php echo $challenge[0][5]; ?>
                 </h1>
                 <!-- Languages & techs to solve ch-->
                 <ul class="langs_nad_techs">
-                    <li class="html">HTML</li>
-                    <li class="css">CSS</li>
-                    <li class="js">JS</li>
+                    <?php for($i = 0 ; $i < $len ; $i++){
+                        echo "<li class='".$langs[$i]."'>".$langs[$i]."</li>";
+                    } ?>
                 </ul>
                 <!-- Desktop & Mobile Designe -->
                 <div class="design">
                     <div class="desk_design">
-                        <img src="design/desktop-design.jpg" alt="desk_design">
+                        <img src="<?php echo "./admin/preview/desk/".$challenge[0][7]; ?>" alt="desk_design">
                     </div>
                     <div class="mob_design show_des">
-                        <img src="design/mobile-design.jpg" alt="mob_design">
+                        <img src="<?php echo "./admin/preview/mob/".$challenge[0][6]; ?>" alt="mob_design">
                     </div>
                 </div>
             </div>
@@ -57,10 +72,10 @@
                 <div class="start_download">
                     <h2>Start Challenge</h2>
                     <p class="desc">
-                        This will be a fun one! Your challenge is to build this countdown timer. There are lots of small CSS tests in the design as well. So it should keep you busy!
+                        <?php echo $challenge[0][4]; ?>
                     </p>
                     <button class="download">
-                        <a href="#">Download zip file</a>
+                        <a id="download" href="<?php echo 'admin/files/'.$challenge[0][3]; ?>" download="<?php echo $challenge[0][3]; ?>">Download zip file</a>
                         <img src="./images/zip.svg" alt="download zip file">
                     </button>
                 </div>
@@ -70,5 +85,22 @@
     </div>
     <script src="scripts/index.js"></script>   
     <script src="scripts/view_challenge.js"></script>
+    <script>
+        document.getElementById('download').addEventListener('click',()=>{
+            const params = "idChall="+<?php echo $challenge[0][0];?>+"&idDev="+<?php echo $_SESSION['id'];?>;
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST","download.php",true);
+
+            xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+
+            xhr.onload = function(){
+                if(xhr.status === 200){
+                    alert("Happy codding ;)");
+                }
+            }
+            xhr.send(params);
+        });
+
+    </script>
 </body>
 </html>

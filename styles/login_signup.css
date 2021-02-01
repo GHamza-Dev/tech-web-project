@@ -91,7 +91,7 @@
     font-size: .9rem;
     padding: 7px 0;
     color: var(--nav-anchor-clr);
-    transition: all .7s ease-in-out;
+    transition: all .7s ease-in;
 }
 
 #forms input:hover{
@@ -109,7 +109,7 @@
     background:linear-gradient(to right,#8E65EB,#d412aa);
     background-position: right;
     background-size: 200%;
-    transition: all .5s ease-in-out;
+    transition: all .5s ease-in;
 }
 
 #forms button:hover{

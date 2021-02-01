@@ -174,7 +174,16 @@ header{
     color: #fff;
     background: linear-gradient(to right,var(--primary--clr),var(--secondary--clr));
     outline: none;
+    transition: all .5s ease-in;
+    cursor: pointer;
+    background-position: right;
+    background-size: 200%;
 }
+
+.container .h_txt button:hover{
+    background-position: left;
+}
+
 /*
 *
 *

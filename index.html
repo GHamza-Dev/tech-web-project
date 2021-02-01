@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home...</title>
+    <title>Home || welcome !</title>
     <link rel="stylesheet" href="styles/home-style.css">
     <link rel="stylesheet" href="styles/login_signup.css">
 </head>
@@ -19,7 +19,7 @@
                     <img src="./images/codding.jpg" alt="welcome"> 
                 </div>
                 <div id="forms">
-                    <form  action="" class="signup register">
+                    <form  action="dev_register.php" method="POST" class="signup register">
                         <ul>
                             <li>
                                 <label for="fname">First name</label>
@@ -38,7 +38,7 @@
                                 <input type="password" name="pass" id="pass" placeholder="Enter password">
                             </li>
                             <li>
-                                <button type="submit">Register</button>
+                                <button id="submit" type="submit">Register</button>
                             </li>
                             <li>
                                 <span id="go_to_login">Login</span>
@@ -53,10 +53,10 @@
                             </li>
                             <li>
                                 <label for="pass">Password</label>
-                                <input type="password" name="pass" id="pass" placeholder="Enter password">
+                                <input type="password" name="lpass" id="lpass" placeholder="Enter password">
                             </li>
                             <li>
-                                <button type="submit">Login</button>
+                                <button id="submit_Login" type="submit">Login</button>
                             </li>
                             <li>
                                 <span id="go_to_signup">Don't have account</span>
@@ -78,8 +78,8 @@
             
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="challenges.html">Challenges</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="challenges.php">Challenges</a></li>
+                    <li><a href="solutions.php">Solutions</a></li>
                     <li id="ls"><a href="#">Login | Signup</a></li>
                 </ul>
                 <button class="btn-menu">
@@ -168,6 +168,7 @@
         <!-- END Footer-->
     </div>
     <!-- Main script -->
+    <span class="filter_icon"></span>
     <script src="scripts/index.js"></script>
     <script src="scripts/login_register.js"></script>
 </body>

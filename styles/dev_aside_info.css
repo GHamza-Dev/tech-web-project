@@ -1,0 +1,60 @@
+
+
+
+
+/** dev info
+************/
+.dev_infos{
+    position: fixed;
+    top: 15%;
+    right: -3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 11;
+}
+
+
+.dev_infos img{
+    width: 50px;
+    border: dashed var(--primary--clr) 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 5px #cfc9c9;
+}
+
+.dev_infos .dev_name h3{
+    transform: rotate(90deg);
+    margin-top: 55px;
+    font-size: 1.5rem;
+    color: var(--primary--clr);
+    text-shadow:#cfc9c9 5px 5px 35px;
+    text-transform: capitalize;
+}
+
+.menu{
+    display: flex;
+}
+
+img#logout,
+img#profile{
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 70px;
+    z-index: 12;
+    box-shadow: none;
+}
+
+
+img#logout{
+    top: 120px;
+}
+
+
+.dev_infos.hide_menu .menu{
+    display: none;
+}
+

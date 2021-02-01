@@ -1,0 +1,328 @@
+:root{
+    --primary--clr:rgb(26, 24, 24);
+    --variant--clr:#413535;
+    --light--clr:#D2D2D2;
+    --gradient--bg:linear-gradient(to bottom right ,#d412aa 10%,#8E65EB);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: "Aromo";
+    src: url('Arimo/Arimo-VariableFont_wght.ttf');
+}
+
+body{
+    width: 100%;
+    font-family: "Aromo";
+    letter-spacing: 1.1px;
+    background:linear-gradient(to right,var(--primary--clr),var(--variant--clr)) ;
+    color: var(--light--clr);
+}
+
+body ul{
+    list-style: none;
+}
+
+/***** flex : row direction
+***************************/
+.row_direction,
+.container,
+.display nav ul,
+.display .cards,
+form.search{
+    display: flex;
+    flex-direction: row;
+}
+
+/****** Container
+*****************/
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/** Aside bar **/
+aside{
+    width: 20%;
+    background-color: var(--primary--clr);
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+}
+
+aside nav{
+    margin-top: 15px;
+}
+
+aside nav ul {
+    margin-top: 50px;
+}
+aside nav ul li{  
+    margin:20px 0 0 50px;
+    text-align: start;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1.1px;
+    border-bottom: 2px solid transparent;
+
+    transition: all .5s ease-in-out;
+}
+
+aside nav ul li:hover{
+    border-bottom: 2px solid var(--variant--clr);
+}
+
+/** display section **/
+.display{
+    width: 80%;
+    margin-left: 20%;
+}
+.display *{
+    /*border: red 1px dotted;*/
+}
+.display nav,
+.display .cards,
+.display table,
+.display .title{
+    width: 95%;
+    margin: 15px auto;
+}
+
+
+.display nav ul{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.display nav h2{
+    font-size: 2rem;
+    color: var(--light--clr);
+    color: #fff;
+    text-transform: uppercase;
+    opacity: .9;
+}
+
+/** display cards **/
+.display .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/** cards => card (li) **/
+.display .cards li{
+    width: 25%;
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 5px;
+    background-size: 200%;
+    position: relative;
+    background-size: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.display .cards img{
+    width: 50px;
+    margin: 5px 0;
+}
+
+.display .cards p{
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.display .cards h3{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.display .nbr_of_challs{
+    background-color: rgba(48, 63, 159, 0.6);
+    background-image: url('images/challenge_icon.png');
+}
+
+.display .nbr_of_sols{
+    background-color: rgba(0, 137, 123,.6);
+    background-image: url('images/solution_icon.png');
+}
+.display .nbr_of_devs{
+    background-color: rgb(199, 40, 40,.6);
+    background-image: url('images/programmer.png');
+
+}
+
+/** onhover event **/
+.display .nbr_of_challs:hover{
+    background-color: rgba(48, 63, 159,.2);
+}
+.display .nbr_of_sols:hover{
+    background-color: rgba(0, 137, 123,.2);
+}
+.display .nbr_of_devs:hover{
+    background-color: rgb(199, 40, 40,.2);
+}
+
+
+
+/**** Search from 
+*****************/
+form.search{
+    position: relative;
+    background-color: var(--light--clr);
+    height: 30px;
+    border-radius: 5px;
+}
+
+form.search:hover{
+    outline: 3px #D2D2D2;
+}
+
+form.search input{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding-left: 5px;
+    border-left: solid 1px #929292;
+    outline: none;
+    font-size: 1.1rem;
+    
+}
+
+/***** wrapper : add challenge
+*******************************/
+.wrapper_add_challenge,
+#form_add_challenge{
+    display: flex;
+    flex-direction: column;
+    
+}
+.wrapper_add_challenge{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0,.5);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#form_add_challenge{
+    background-color: #fff;
+    border-radius: 10px;
+    color: #000;
+    width: 50%;
+    height: 90%;
+    justify-content: space-evenly;
+    text-align: start;
+    padding: 0 30px;
+    position: relative;
+}
+
+#form_add_challenge input{
+    font-size: 1.2rem;
+    padding: 6px 0;
+    border: none;
+    border-bottom: 1px solid rgba(48, 63, 159,.5);
+}
+
+#form_add_challenge input[type=file]{
+    
+}
+
+
+
+#submit_ch{
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background: var(--gradient--bg);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    background-position: left;
+    background-size: 200%;
+    transition: all .5s ease-out;
+    float: right;
+}
+#submit_ch:hover{
+    background-position: right;
+}
+
+
+
+/** close btn **/
+#close{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    font-size: 2rem;
+    color: #8E65EB;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: all .5s ease-in-out;
+    transform: rotate(90deg);
+    opacity: .5;
+}
+
+#close img{
+    width: 55%;
+}
+
+/** show/head form **/
+.show_form{
+    display: flex;
+    opacity: 0;
+    animation: animateWrapper  .5s ease-in-out forwards;
+ }
+ @keyframes animateWrapper{
+     to{
+         opacity: 1;
+     }
+ }
+
+
+
+/** devs table **/
+
+.tab td img{
+    width: 50px;
+}
+.tab td{
+    padding: 8px 0 5px 8px;
+}
+
+.tab tr:nth-child(1){
+    height: 50px;
+    background-color: rgba(48, 63, 159, 0.1);
+}
+
+.tab tr{
+    background-color: #413535;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+.tab tr:hover{
+    background-color: rgba(48, 63, 159, 0.1);
+}
+
+.tab td a{
+    color: var(--light--clr);
+}

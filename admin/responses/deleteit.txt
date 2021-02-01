@@ -1,0 +1,8 @@
+echo "<pre>";
+print_r($db->getDevAdmin());
+echo "<pre>";
+
+
+echo "<hr>  <pre>";
+print_r($db->getDevs());
+echo "<pre>";

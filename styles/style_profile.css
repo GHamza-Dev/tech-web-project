@@ -41,6 +41,7 @@ ul.menu{
 .dev img.location{
     width: 15px;
     height: 20px;
+    text-transform: capitalize;
 }
 
 .dev .github_account img{
@@ -59,6 +60,7 @@ ul.menu{
     margin-left:15px;
     padding-left: 15px;
     height: 100%;
+    text-transform: capitalize;
 }
 
 .dev_bio h2,
@@ -103,43 +105,47 @@ border-bottom: 2px solid var(--primary--clr);
 cursor: pointer;
 }
 
-.view_todos{
-    margin-left: 20px;
+#submit_solution{
+   margin-left: 20px;
 }
 
 ul.menu li:hover{
     border-bottom: red 2px solid;
 }
 
-/***** todos
+
+/***** solutions_
 *************/
-.todos{
+.solutions_{
     width: 90%;
     margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
-.todos .todo{
+.solutions_ .done{
     margin: 10px;
     margin-left: 0;
     background-color: var(--bg--clr2);
 }
 
-.todos .submit_s a{
+.solutions_ .submit_s a{
     font-size: 0.9rem;
     text-decoration: underline;
 }
 
 /*** levels ****/
-.todo.intermediate{
+.done.intermediate{
     border-top: 5px solid #e9a333;
 } 
-.todo.junior{
+.done.junior{
     border-top: 5px solid #11c9da;
 }
-.todo.senior{
+.done.senior{
    border-top:5px solid slateblue;
 }
-.todo.newbe{
+.done.newbe{
     border-top:  solid 5px #069b06;
 }
+
+
+
