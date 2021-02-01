@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin || Welcome !</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../logo/logo.css">
 </head>
 <body>
     <div class="container">
         <!-- aside start -->
         <aside class="left">
             <nav>
-                <div class="logo"><h1>Logo</h1></div>
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="../index.html">
+                        <img id="logo" src="../logo/frontendcurve-w.svg" alt="frontendcutve.svg">
+                    </a>
+                </div>
                 <ul class="menu">
                     <li id="btn_addchallenge">Add challenge</li>
                     <li id="challenges">Challenges</li>

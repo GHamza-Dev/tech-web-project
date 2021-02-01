@@ -21,6 +21,7 @@ if (!isset($_SESSION['id'])) {
     <link rel="stylesheet" href="styles/langs-and-levels.css">
     <link rel="stylesheet" href="styles/style_solutions.css">
     <link rel="stylesheet" href="styles/dev_aside_info.css">
+    <link rel="stylesheet" href="logo/logo.css">
 </head>
 <body>
     <div class="container">
@@ -45,9 +46,11 @@ if (!isset($_SESSION['id'])) {
         <header>
             <nav>
 
+                <!-- Logo -->
                 <div class="logo">
-                    <!--img src="./images/logo_beta" alt="cofee"-->
-                    <h1>Logo</h1>
+                    <a href="index.html">
+                        <img id="logo" src="./logo/frontendcurve.svg" alt="frontendcutve.svg">
+                    </a>
                 </div>
             
                 <ul>

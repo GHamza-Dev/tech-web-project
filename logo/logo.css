@@ -1,0 +1,33 @@
+
+
+
+#logo{
+   width: 150px;
+}
+
+.brows_challenges,
+.brows_solutions{
+   width: 90%;
+   margin:auto;
+}
+
+.brows_challenges img,
+.brows_solutions img{
+   width: 100%;
+}
+
+
+.gif{
+   margin-top: 50px;
+   border-radius: 10px;
+   box-shadow: 0 -2px 5px gray;
+}
+
+.gif img{
+   border-radius: 20px;
+}
+
+.brows_solutions{
+   margin-top: 50px;
+   padding-bottom: 40px;
+}

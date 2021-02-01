@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="styles/style_profile.css">
     <link rel="stylesheet" href="styles/langs-and-levels.css">
     <link rel="stylesheet" href="styles/style_submit_sl.css">
+    <link rel="stylesheet" href="logo/logo.css">
 </head>
 <body>
     <div class="container">
@@ -54,11 +55,12 @@
         <header>
             <nav>
 
+                <!-- Logo -->
                 <div class="logo">
-                    <!--img src="./images/logo_beta" alt="cofee"-->
-                    <h1>Logo</h1>
+                    <a href="index.html">
+                        <img id="logo" src="./logo/frontendcurve-w.svg" alt="frontendcutve.svg">
+                    </a>
                 </div>
-            
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="challenges.php">Challenges</a></li>
