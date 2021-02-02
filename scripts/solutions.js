@@ -31,7 +31,7 @@ function displaySolutions(list){
             <div class="challenge">
                 <!-- img of challenge -->
                 <div class="img">
-                    <img src="./images/test_img.jpg" alt="">
+                    <img src="./admin/preview/desk/${list[i][10]}" alt="">
                 </div>
                 <div class="ch_content">
                     <!-- Languages & techs to solve ch-->

@@ -4,7 +4,7 @@
     $db = new Db();
      
     // get infos
-    if(isset($_GET['dev_id'])){
+    if(isset($_SESSION['id'])){
         // dev infos
         $id = $_SESSION['id'];
         $infos = $db->profileDev($id);
@@ -23,11 +23,10 @@
 
     //submit solution
     if (isset($_GET['submitSol'])) {
-        if($db->addSolution($_GET['solutionId'],$_SESSION['id'],$_GET['github'],$_GET['demo'],$_GET['feedback'],$_GET['langs'])){
-            deleteDownload($id_chall,$id_dev);
-            echo "<script>alert('Solution added successfully :)')</script>";
-            header('location:solutions.php');
-        }
+        $db->addSolution($_GET['solutionId'],$_SESSION['id'],$_GET['github'],$_GET['demo'],$_GET['feedback'],$_GET['langs']);
+        echo "<script>alert('Solution added successfully :)')</script>";
+        $id_chall = $_GET['solutionId'];
+        $db->deleteDownload($id_chall,$id);
     }
 
     

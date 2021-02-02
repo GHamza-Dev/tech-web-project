@@ -32,11 +32,11 @@ class Db{
     # Get Solutions
     function getsolution(){
         $con=$this->connect();
-        $res=$con->prepare("SELECT Dev.first_name,Dev.last_name,Solution.github_link, Solution.demo_link,Solution.feedback,challenge.level,challenge.challenge_title, challenge.langs_and_techs , Dev.score , Dev.image FROM Solution JOIN challenge ON Solution.id_chall= challenge.id_chall JOIN Dev ON Dev.id_Dev= Solution.id_dev ");
+        $res=$con->prepare("SELECT Dev.first_name,Dev.last_name,Solution.github_link, Solution.demo_link,Solution.feedback,challenge.level,challenge.challenge_title, challenge.langs_and_techs , Dev.score , Dev.image , challenge.` desktop_preview` FROM Solution JOIN challenge ON Solution.id_chall= challenge.id_chall JOIN Dev ON Dev.id_Dev= Solution.id_dev");
         $res->execute();
         $lst=[];
         while($ligne=$res->fetch()){
-          $lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5],$ligne[6],$ligne[7],$ligne[8],$ligne[9]];
+          $lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5],$ligne[6],$ligne[7],$ligne[8],$ligne[9],$ligne[10]];
         }
         $res->closeCursor();  
         return $lst;

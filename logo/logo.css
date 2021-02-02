@@ -4,7 +4,20 @@
 #logo{
    width: 150px;
 }
+.l-footer{
+   border-bottom: 1px solid #053946;
+}
 
+
+
+
+
+
+
+
+
+
+/**  **/
 .brows_challenges,
 .brows_solutions{
    width: 90%;
@@ -19,7 +32,7 @@
 
 .gif{
    margin-top: 50px;
-   border-radius: 10px;
+   border-radius: 5px;
    box-shadow: 0 -2px 5px gray;
 }
 
