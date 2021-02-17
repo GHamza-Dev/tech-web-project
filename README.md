@@ -73,9 +73,9 @@
 <hr>
 <h2>Admin Panel</h2>
 
-<img src="demo/challs.png">
-<img src="demo/sols.png">
-<img src="demo/add-ch.png">
+<img src="demo/admin-challs.png">
+<img src="demo/admin-sols.png">
+<img src="demo/admin-add-ch.png">
 
 
 
