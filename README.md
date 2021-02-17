@@ -6,6 +6,7 @@
 ![Frontendcurve logo](./logo/frontendcurve.svg) <br>
 <p>this project inspired from frontendmentor.io</p> <br>
 ** Languages and technologies ** <br>
+
 1. Front-end
 * HTML / CSS
 * Javascript
@@ -13,3 +14,7 @@
 * PHP
 * MySql
 * Ajax ;)
+<br>
+**Home**
+<img src="demo/home1-fv.png">
+
